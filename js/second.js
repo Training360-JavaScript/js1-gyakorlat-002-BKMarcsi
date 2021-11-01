@@ -15,3 +15,13 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+
+function checker(tomb,ertek){
+    visszaObj = {};
+    visszaObj.exists = tomb.indexOf(ertek) !== -1;
+    visszaObj.index = tomb.indexOf(ertek);
+    visszaObj.allElementsAreNumbers = tomb.every(function(elem){return typeof(elem) == 'number'});
+    visszaObj.someElementsAreNumbers = tomb.some(function(elem){return typeof(elem) == 'number'});
+    return visszaObj;
+}
+    

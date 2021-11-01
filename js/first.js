@@ -4,3 +4,9 @@
 - A függvény szorozza meg a tömbelemek értékét 1.27-tel, majd pedig 
 __térjen vissza__ az elemek egész számra kerekített összegével!
 */
+
+'use strict';
+
+function brutto(tomb){
+    return Math.round(1.27*(tomb.reduce(function(previous,elem){return previous+elem})));
+}
